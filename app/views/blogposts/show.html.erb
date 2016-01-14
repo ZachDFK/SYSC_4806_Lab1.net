@@ -9,6 +9,27 @@
   <strong>Contents:</strong>
   <%= @blogpost.contents %>
 </div>
-
 <%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
 <%= link_to 'Back', blogposts_path %>
+
+<p>comments</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Commenttext</th>
+      <th>Author</th>
+      <th>Blogpost</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bpcomments.each do |comment| %>
+      <tr>
+	<td><%= comment.commenttext %></td>
+        <td><%= comment.author %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
