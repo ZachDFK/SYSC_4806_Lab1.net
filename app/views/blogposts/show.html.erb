@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Titli:</strong>
+  <%= @blogpost.titli %>
+</h1>
+
+<div class='boxed'>
+  <strong>Contents:</strong>
+  <%= @blogpost.contents %>
+</div>
+
+<%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
+<%= link_to 'Back', blogposts_path %>
